@@ -49,7 +49,7 @@ const ws = new WorkflowStep('add_task', {
     
         await configure({ blocks });
     },
-    save: async ({ ack, step, update }) => {
+    save: async ({ ack, step, view, update }) => {
         await ack();
     
         const { values } = view.state;
